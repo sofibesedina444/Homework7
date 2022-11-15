@@ -1,65 +1,39 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("ДЗ 1 - задачи: 1, 2 и 3, 4");
-        // Решение 1 задачи
-        int[] array = new int[3];
-        array[0] = 1;
-        array[1] = 2;
-        array[2] = 3;
-        double[] myArr = {1.57, 7.654, 9.986};
-        int[] helloWorld = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        System.out.println("ДЗ 2 - задача 1:");
+        int[] spending = {156009, 171787, 117638, 144115, 169173, 188632, 109158, 139645, 107150, 111238, 108977, 174114, 119209, 173950, 163335, 180177, 167599, 161880, 156319, 158361, 166320, 160337, 118736, 133196, 127040, 191858, 103053, 163528, 198169, 153489};
+        int summ = 0;
+        for (int j : spending) {
+            summ += j;
+        }
+        System.out.println("Сумма трат за месяц составила " + summ + " рублей");
 
-        // Решение 2 и 3 задачи для первого массива
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i]);
-            if (i != array.length - 1) {
-                System.out.print(", ");
+        System.out.println("ДЗ 2 - задача 2:");
+        int max = 0;
+        int min = spending[spending.length - 1];
+        for (int j : spending) {
+            if (j > max) {
+                max = j;
+            }
+            if (j < min) {
+                min = j;
             }
         }
-        System.out.println();
-        for (int i = array.length - 1; i >= 0; i--) {
-            System.out.print(array[i]);
-            if (i != 0) {
-                System.out.print(", ");
-            }
+        System.out.println("Минимальная сумма трат за день составила " + min + " рублей. Максимальная сумма трат за день составила " + max + " рублей");
+
+        System.out.println("ДЗ 2 - задача 3:");
+        double mean = 0;
+        double summ1 = 0;
+        for (int j : spending) {
+            summ1 += j;
+            mean = summ1 / spending.length;
         }
-        System.out.println();
-        // Решение для 4 задачи
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] % 2 != 0) {
-                array[i] += 1;
-            }
-            System.out.print(array[i] + " ");
-        }
-        System.out.println();
-        // Решение 2 и 3 задачи для второго массива
-        for (int i = 0; i < myArr.length; i++) {
-            System.out.print(myArr[i]);
-            if (i != myArr.length - 1) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println();
-        for (int i = myArr.length - 1; i >= 0; i--) {
-            System.out.print(myArr[i]);
-            if (i != 0) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println();
-        // Решение 2 и 3 задачи для третьего массива
-        for (int i = 0; i < helloWorld.length; i++) {
-            System.out.print(helloWorld[i]);
-            if (i != helloWorld.length - 1) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println();
-        for (int i = helloWorld.length - 1; i >= 0; i--) {
-            System.out.print(helloWorld[i]);
-            if (i != 0) {
-                System.out.print(", ");
-            }
+        System.out.println("Средняя сумма трат за месяц составила " + mean + " рублей");
+
+        System.out.println("ДЗ 2 - задача 4:");
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
         }
     }
 }
